@@ -4,35 +4,144 @@
     <meta charset="utf-8">
     <title>Comparison Table Concept</title>
     <link href="main.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.4/TweenMax.min.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:600,700" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/typicons/2.0.9/typicons.min.css" rel='stylesheet'>
 
   </head>
   <body>
-
-    <div class="container">
+    <div class="background"></div>
+    <header>
+      <span class="typcn typcn-vendor-apple" style="color: white; margin-top: 24px; font-size: 24px;"></span>
       <h1>
-      Wear your future, today
+      Wear your future today.
       </h1>
 
-      <a href="#"><div class="button">lowest price</div></a>
-      <a href="#"><div class="button">most features</div></a>
+      <a href="#"><div class="button">compare watches</div></a>
+    </header>
+    <div class="container">
 
       <div class="comparison">
-        <div class="watch-column" id="s1">
-          <div class="watch-column-header">S1</div>
-          <div class="watch-column-body" id="s1-body"></div>
+        <!-- comparable sliders -->
+      <div class="underline background-green"></div>
+      <div class="slider-container">
+        <div class="row-container">
+            <div class="storage shared background-green" id="storage8GB">
+
+                  <div class="s1-storage slider-content left">8GB</div>
+                  <div class="s3-storage slider-content right leftMidThumbs"><span class="typcn typcn-thumbs-up"></span></div>
+
+            </div>
+            <div class="storage single background-grey-outline" id="storage16GB">16GB</div>
+        </div>
+        <div class="row-container">
+            <div class="connectivity shared background-green" id="connectivityWifiOnly">
+
+              <div class="s1-connectivity slider-content left">wifi only</div>
+              <div class="s3-connectivity slider-content right leftMidThumbs"><span class="typcn typcn-thumbs-up"></span></div>
+
+            </div>
+            <div class="connectivity single background-grey-outline" id="connectivityWifiData">wifi + 4g</div>
+        </div>
+        <div class="row-container">
+            <div class="siri single empty-text-green" id="noSiri">no siri</div>
+            <div class="siri shared background-grey-outline" id="siriEnabled">
+
+              <div class="slider-content left">siri enabled</div>
+              <div class="slider-content right farRightThumb"><span class="typcn typcn-thumbs-up"></span></div>
+
+              </div>
+        </div>
+
+        <div class="row-container">
+            <div class="gps single empty-text-green" id="noGPS">no gps</div>
+            <div class="gps shared background-grey-outline" id="enabledGPS">
+
+              <div class="slider-content left">gps</div>
+              <div class="slider-content right farRightThumb"><span class="typcn typcn-thumbs-up"></span></div>
+
+            </div>
+        </div>
+
+        <div class="row-container">
+            <div class="water single background-green" id="splashOnly">splash res.</div>
+            <div class="water shared background-grey-outline" id="waterproof">
+
+              <div class="slider-content left">waterproof</div>
+              <div class="slider-content right farRightThumb"><span class="typcn typcn-thumbs-up"></span></div>
+
+              </div>
+        </div>
+
+        <div class="row-container">
+            <div class="bright single background-green" id="loBright">lo bright</div>
+            <div class="bright shared background-grey-outline" id="hiBright">
+
+              <div class="slider-content left">ultra bright</div>
+              <div class="slider-content right farRightThumb"><span class="typcn typcn-thumbs-up"></span></div>
+
+            </div>
+        </div>
+
+      </div>
+
+
+
+        <!-- table design -->
+        <div class="watch-column" id="s1" data-id="s1-tab">
+          <div class="watch-column-header background-green" id="s1-header">S1
+            <div class="chevron background-green"></div>
+
+          </div>
+          <div class="watch-column-body" id="s1-body">
+            <div class="hero">
+            <img src="img/series1_medium.jpg" alt="">
+            <p class="init price text-green">$359.95</p>
+
+            </div>
+
+          </div>
 
         </div>
-        <div class="watch-column" id="s3">
-          <div class="watch-column-header">S3</div>
-          <div class="watch-column-body" id="s3-body"></div>
+        <div class="watch-column" id="s3" data-id="s3-tab">
+          <div class="watch-column-header background-grey" id="s3-header">S3
+          <div class="chevron"></div>
+          </div>
+
+
+          <div class="watch-column-body" id="s3-body">
+
+            <div class="hero">
+            <img src="img/series3_gps_medium.jpg" alt="">
+            <p class="price text-grey">$459.95</p>
+
+            </div>
+
+          </div>
         </div>
 
-        <div class="watch-column" id="s3plus">
-          <div class="watch-column-header">S3+</div>
-          <div class="watch-column-body" id="s3plus-body"></div>
+        <div class="watch-column" id="s3plus" data-id="s3plus-tab">
+          <div class="watch-column-header background-grey" id="s3plus-header">S3+
+          <div class="chevron"></div>
+          </div>
+          <div class="watch-column-body" id="s3plus-body">
+
+            <div class="hero">
+            <img src="img/series3_gps_cellular_small.jpg" alt="">
+            <p class="price text-grey">$559.95</p>
+
+            </div>
+
+
+          </div>
         </div>
       </div>
+      <div class="cta-button">
+        <span class="typcn typcn-vendor-apple"></span>&nbsp
+        Add&nbsp<span id="product-name-output"></span>&nbspto cart
+      </div>
+      <div class="back"><span class="typcn typcn-arrow-up"></span>back</div>
     </div>
 
 
